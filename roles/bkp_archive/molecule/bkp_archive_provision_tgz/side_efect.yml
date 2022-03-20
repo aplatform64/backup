@@ -3,10 +3,9 @@
   hosts: "{{ lookup('env', 'DEVAP_TEST_PLATFORM') | default('all') }}"
   gather_facts: false
   vars:
-    test_path: "/tmp"
     test_file: "test_file_00001.sh"
     test_archive: "test_file_00001.sh.tgz"
-    test_target: "/tmp/bkp_archive_provision_tgz_test_target"
+    test_target: "{{ test_path }}/bkp_archive_provision_tgz_test_target"
   tasks:
 
     - name: "Remove test file"

@@ -3,11 +3,13 @@
   hosts: "{{ lookup('env', 'DEVAP_TEST_PLATFORM') | default('all') }}"
   gather_facts: false
   vars:
-    test_path: "/tmp"
-    test_target: "/tmp/bkp_archive_provision_bzip2_test_target"
     test_file: "test_file_00001.sh"
     test_archive: "test_file_00001.sh.bz2"
   tasks:
+    - name: "Load common test vars"
+      ansible.builtin.include_vars:
+        file: "../test_vars.yml"
+
     - name: "Discover platform"
       ansible.builtin.setup:
         gather_subset: "min"
