@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0]
 
+### Added
+
 - all: RHEL-8 and AlmaLinux8 compatibility
 
 ## [1.0.4]
