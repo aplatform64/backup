@@ -43,7 +43,7 @@ bkp_archive_os_family: "
   -%}
     {{ 'Debian' }}
   {%- else -%}
-    {{ 'Linux' }}
+    {{ 'NotSupported' }}
   {%- endif -%}
   "
 
