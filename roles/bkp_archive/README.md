@@ -118,7 +118,7 @@ bkp_archive_packages_installed:
 ### Dependencies
 
 - Ansible Collections:
-  - serdigital64.core
+  - serdigital64.system
     - sys_repository
 
 ### Prerequisites
