@@ -2,4 +2,6 @@
 - name: "Backup / Archive / Deploy / Package"
   ansible.builtin.include_tasks:
     file: "bkp_archive_deploy_package.yml"
+  when:
+    - bkp_archive_packages | length > 0
 ...

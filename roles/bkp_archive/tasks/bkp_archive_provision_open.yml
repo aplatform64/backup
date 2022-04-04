@@ -70,6 +70,7 @@
     - bkp_archive___provision_archive_file['stat']['exists']
     - bkp_archive___provision_archive_file['stat']['mimetype'] in bkp_archive_formats['xz']
     - bkp_archive___provision_archive_encapsulated | length == 0
+    - bkp_archive_base['run']['xz'] is defined
 
 - name: "Backup / Archive / Provision / Open / Format: bzip2"
   ansible.builtin.include_tasks:
