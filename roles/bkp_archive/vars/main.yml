@@ -1,4 +1,17 @@
 ---
+bkp_archive_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "OracleLinux8"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Fedora33"
+  - "Fedora35"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
 # Supported archive formats
 bkp_archive_formats:
   common:
@@ -12,18 +25,6 @@ bkp_archive_formats:
     - "application/x-xz"
   bzip2:
     - "application/x-bzip2"
-
-bkp_archive_platforms:
-  - "CentOS8"
-  - "RedHat8"
-  - "AlmaLinux8"
-  - "OracleLinux8"
-  - "Ubuntu20"
-  - "Ubuntu21"
-  - "Fedora33"
-  - "Fedora35"
-  - "Debian10"
-  - "Debian11"
 
 bkp_archive_os_family: "
   {%- if
@@ -42,6 +43,10 @@ bkp_archive_os_family: "
     ( ansible_distribution == 'Debian' )
   -%}
     {{ 'Debian' }}
+  {%- elif
+      ( ansible_distribution == 'MacOSX' )
+  -%}
+    {{ 'MacOSX' }}
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
