@@ -15,6 +15,6 @@
   ansible.builtin.include_tasks:
     file: "bkp_archive_prerequisite.yml"
   when:
-    - "'resolve_prereq' in bkp_archive"
+    - bkp_archive['resolve_prereq'] is defined
     - bkp_archive['resolve_prereq']
 ...

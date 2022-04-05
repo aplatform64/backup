@@ -1,0 +1,9 @@
+---
+bkp_archive_base:
+  run:
+    # xz: # not supported
+    bzip2: "/usr/bin/bzip2"
+    mv: "/bin/mv"
+
+bkp_archive_packages: []
+...
