@@ -3,16 +3,17 @@ bkp_rclone_server_application:
   name: "rclone"
   type: "
     {%- if
-        ( ansible_distribution == 'CentOS' ) or
+      ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
       ( ansible_distribution == 'AlmaLinux' ) or
-        ( ansible_distribution == 'OracleLinux' ) or
-        ( ansible_distribution == 'Fedora' )
+      ( ansible_distribution == 'Rocky' ) or
+      ( ansible_distribution == 'OracleLinux' ) or
+      ( ansible_distribution == 'Fedora' )
     -%}
       {{ 'rpm' }}
     {%- elif
-        ( ansible_distribution == 'Debian' ) or
-        ( ansible_distribution == 'Ubuntu' )
+      ( ansible_distribution == 'Debian' ) or
+      ( ansible_distribution == 'Ubuntu' )
     -%}
       {{ 'deb' }}
     {%- endif -%}
