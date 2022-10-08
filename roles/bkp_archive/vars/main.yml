@@ -5,6 +5,7 @@ bkp_archive_platforms:
   - "AlmaLinux8"
   - "Rocky8"
   - "OracleLinux8"
+  - "OracleLinux9"
   - "Ubuntu20"
   - "Ubuntu21"
   - "Ubuntu22"
@@ -29,7 +30,7 @@ bkp_archive_formats:
   bzip2:
     - "application/x-bzip2"
 
-bkp_archive_os_family: "
+bkp_archive_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -54,7 +55,6 @@ bkp_archive_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # bkp_archive___provision_item: ~
 bkp_archive___provision_archive_file: ~
