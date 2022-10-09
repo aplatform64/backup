@@ -30,7 +30,7 @@ bkp_archive_formats:
   bzip2:
     - "application/x-bzip2"
 
-bkp_archive_os_family: |
+bkp_archive_os_family: >-
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
